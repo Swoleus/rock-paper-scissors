@@ -68,6 +68,35 @@ let win = "You win!";
 let lose = "You lose!";
 let tie = "It's a tie!";
 
-const playerSelection = prompt("Pick 'Rock, Paper or Scissors").toLowerCase();
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+var i = 0;
+
+/* const playMatch = () => {
+    const playerSelection = prompt("Pick 'Rock, Paper or Scissors").toLowerCase();
+    const computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection));
+    console.log("Your score = " + userScore);
+    console.log("Computer's score = " + computerScore);
+    i++;
+    if (i !==5) {
+        playMatch();
+    } else {
+        alert("Game Over -- User("+userScore+") vs Computer("+computerScore+")");
+    }
+} */ /* Incrementing score, display it and then play 5 times */
+
+const playMatch = () => {
+    const playerSelection = prompt("Pick 'Rock, Paper or Scissors").toLowerCase();
+    const computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection));
+    console.log("Your score = " + userScore);
+    console.log("Computer's score = " + computerScore);
+    if (userScore != 5 && computerScore != 5) {
+        playMatch();
+    } else if (userScore === 5) {
+        console.log("You win!");
+    } else {
+        console.log("You lose!");
+    }
+} // Playing indefinitely until one score = 5 
+
+playMatch();
