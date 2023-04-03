@@ -20,7 +20,7 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
         return `You win! Scissors beats paper!`
     } else {
-        return `Loser! ${computerSelection} beats ${playerSelection}`;
+        return `Loser, ${computerSelection} beats ${playerSelection}`;
     }
 }
 
