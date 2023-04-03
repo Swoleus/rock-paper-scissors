@@ -93,9 +93,9 @@ const playMatch = () => {
     if (userScore != 5 && computerScore != 5) {
         playMatch();
     } else if (userScore === 5) {
-        console.log("You win!");
+        console.log(`You win! Your score is ${userScore} to the computer's ${computerScore}`);
     } else {
-        console.log("You lose!");
+        console.log(`You lose! Your score is ${userScore} to the computer's ${computerScore}`);
     }
 } // Playing indefinitely until one score = 5 
 
