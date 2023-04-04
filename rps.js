@@ -11,7 +11,6 @@ function getComputerChoice() {
 /* console.log(getComputerChoice()); */
 
 // This is to demonstrate 1 round.
-
 /* function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return `It is a tie, you both picked ${playerSelection}!`
@@ -27,7 +26,6 @@ function getComputerChoice() {
 } */ 
 
 // Function below is for incrementing score to allow either best of 5 or determined winner.
-
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === "rock") {
         if (computerSelection === "paper") {
@@ -74,6 +72,7 @@ let tie = "It's a tie!";
 
 var i = 0; // variable for incrementing method.
 
+// Incrementing score, display it and then play 5 times below.
 /* const playMatch = () => {
     const playerSelection = prompt("Pick 'Rock, Paper or Scissors").toLowerCase();
     const computerSelection = getComputerChoice();
@@ -86,8 +85,9 @@ var i = 0; // variable for incrementing method.
     } else {
         alert("Game Over -- User("+userScore+") vs Computer("+computerScore+")");
     }
-} */ /* Incrementing score, display it and then play 5 times */
+} */ 
 
+// Playing indefinitely until one score = 5 
 const playMatch = () => {
     const playerSelection = prompt("Pick 'Rock, Paper or Scissors").toLowerCase();
     const computerSelection = getComputerChoice();
@@ -101,6 +101,6 @@ const playMatch = () => {
     } else {
         console.log(`You lose! Your score is ${userScore} to the computer's ${computerScore}`);
     }
-} // Playing indefinitely until one score = 5 
+} 
 
 playMatch();
